@@ -1,0 +1,96 @@
+{
+  "folders": [
+    {
+      "path": "frontend",
+      "name": "Frontend (React + Vite)"
+    },
+    {
+      "path": "backend",
+      "name": "Backend (Node + Express)"
+    },
+    {
+      "path": "odoo",
+      "name": "Odoo Integration"
+    },
+    {
+      "path": "docs",
+      "name": "Documentation"
+    }
+  ],
+  "settings": {
+    // Code formatting
+    "[javascript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "[json]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // Prettier configuration
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.tabWidth": 2,
+    "prettier.semi": true,
+    "prettier.arrowParens": "always",
+    // ESLint
+    "eslint.enable": true,
+    "eslint.run": "onSave",
+    "eslint.format.enable": true,
+    // Editor
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.trimAutoWhitespace": true,
+    "editor.rulers": [80, 120],
+    "editor.wordWrap": "on",
+    // Files
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.vscode": true,
+      "**/node_modules": true,
+      "**/.DS_Store": true,
+      "**/dist": false
+    },
+    // Search
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/.git": true,
+      "**/dist": true,
+      "**/coverage": true
+    },
+    // Git
+    "git.ignoreLimitWarning": true
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Backend Debug",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/backend/server.js",
+        "restart": true,
+        "console": "integratedTerminal"
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "dsznajder.es7-react-js-snippets",
+      "mongodb.mongodb-vscode",
+      "eamodio.gitlens",
+      "mhutchie.git-graph",
+      "rangav.vscode-thunder-client",
+      "ms-azuretools.vscode-docker",
+      "redhat.vscode-yaml"
+    ]
+  }
+}

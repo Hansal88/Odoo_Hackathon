@@ -1,0 +1,42 @@
+{
+  "name": "traveloop",
+  "version": "1.0.0",
+  "description": "Personalized Travel Planning Platform - Full Stack",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "setup": "bash scripts/setup.sh",
+    "setup:win": "powershell -ExecutionPolicy Bypass -File scripts\\setup.ps1",
+    "start": "node backend/server.js",
+    "test": "cd backend && npm test && cd ../frontend && npm test",
+    "lint": "cd backend && npm run lint && cd ../frontend && npm run lint",
+    "clean": "rm -rf backend/node_modules frontend/node_modules",
+    "seed": "cd backend && node scripts/seed-db.js",
+    "migrate": "cd backend && node scripts/migrate.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "travel",
+    "planning",
+    "express",
+    "react",
+    "mongodb"
+  ],
+  "author": "Traveloop Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/team/traveloop.git"
+  }
+}
