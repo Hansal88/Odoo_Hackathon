@@ -2,6 +2,7 @@ require('dotenv').config();
 const http = require('http');
 const app = require('./src/app');
 const { connectDB } = require('./src/config/db');
+const { initializeSocketIO } = require('./src/config/socketIO');
 
 const PORT = process.env.PORT || 5000;
 
@@ -12,13 +13,21 @@ const PORT = process.env.PORT || 5000;
 
     const server = http.createServer(app);
 
+    // Initialize Socket.IO
+    const io = initializeSocketIO(server);
+
+    // Attach io instance to app for use in routes
+    app.set('io', io);
+
     server.listen(PORT, () => {
       // eslint-disable-next-line no-console
       console.log(`\n🚀 Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
       // eslint-disable-next-line no-console
       console.log(`📍 Backend URL: http://localhost:${PORT}`);
       // eslint-disable-next-line no-console
-      console.log(`🔗 API Health: http://localhost:${PORT}/api/health\n`);
+      console.log(`🔗 API Health: http://localhost:${PORT}/api/health`);
+      // eslint-disable-next-line no-console
+      console.log(`⚡ WebSocket ready for real-time updates\n`);
     });
 
     // Graceful shutdown
