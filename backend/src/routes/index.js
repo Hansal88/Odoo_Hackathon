@@ -8,10 +8,13 @@ router.get('/', (req, res) => res.json({ success: true, message: 'API root' }));
 const authRoutes = require('./authRoutes');
 router.use('/auth', authRoutes);
 
+<<<<<<< HEAD
 // Place image routes
 const placeImageRoutes = require('./placeImageRoutes');
 router.use('/place-images', placeImageRoutes);
 
+=======
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
 // User routes
 const userRoutes = require('./userRoutes');
 router.use('/users', userRoutes);

@@ -2,16 +2,20 @@ const express = require('express')
 const router = express.Router()
 
 const OpenAI = require('openai')
+<<<<<<< HEAD
 const TripExplore = require('../models/TripExplore')
 const TripBudget = require('../models/TripBudget')
 const TripPacking = require('../models/TripPacking')
 const authMiddleware = require('../middleware/authMiddleware')
+=======
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
 
 const client = new OpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
   apiKey: process.env.OPENROUTER_API_KEY,
 })
 
+<<<<<<< HEAD
 function stripCodeFences(content) {
   return String(content || '')
     .replace(/^```json\s*/i, '')
@@ -100,6 +104,8 @@ function buildExploreFallback({
   }
 }
 
+=======
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
 router.post('/plan-trip', async (req, res) => {
   try {
     const { destination, budget, days } = req.body
@@ -143,6 +149,7 @@ Include:
   }
 })
 
+<<<<<<< HEAD
 router.post('/explore-details', async (req, res) => {
   try {
     const { tripData = {}, destination, travelStyle } = req.body
@@ -610,4 +617,6 @@ router.post('/packing/save/:tripId', authMiddleware, async (req, res) => {
   }
 })
 
+=======
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
 module.exports = router

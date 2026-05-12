@@ -46,6 +46,10 @@
 | **Hansal** | Backend Lead | APIs, Database Models, Authentication |
 | **Rishi** | Odoo/Full-Stack | Odoo Integration, Backend Support |
 | **Pranali** | Frontend Lead | React Components, UI/UX, Styling |
+<<<<<<< HEAD
+=======
+| **Dhruv** | Tester | checking all pages, testing APIs, Verifying deployment |
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
 | **Mentor** | Reviewer | Code Review, Architecture Guidance, Deployment |
 
 ---

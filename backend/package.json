@@ -15,7 +15,10 @@
   "dependencies": {
     "@cloudinary/react": "^1.14.4",
     "@cloudinary/url-gen": "^1.22.0",
+<<<<<<< HEAD
     "axios": "^1.16.0",
+=======
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
@@ -26,10 +29,17 @@
     "morgan": "^1.10.0",
     "nodemailer": "^8.0.7",
     "openai": "^6.37.0",
+<<<<<<< HEAD
     "socket.io": "^4.8.3",
+=======
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a50ef801b0859d710a0c82e1bb15db0cf3c41bb0
